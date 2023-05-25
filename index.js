@@ -13,9 +13,9 @@ app.use(cors())
 
 
 app.use("/data",postRouter)
-app.get("/",async(req,res)=>{
-    res.send("Welcome Home")
-})
+// app.get("/",async(req,res)=>{
+//     res.send("Welcome Home")
+// })
 
 const port =4100
 

@@ -7,26 +7,17 @@ const postRouter=express.Router()
 
 // Get Operation
 
-postRouter.get("/employee",async(req,res)=>{
-    let data
-    try{
-    
-        data=await postModel.find()
-        res.send({
-            status: 200,
-            data: data,
-        })
+postRouter.get("/", async (req, res) => {
+    try {
+        const notes = await postModel.find();
+        res.send(notes);
     }
-    catch(error){
-        res.status(400);
-        res.send({ status: 400, error: error });
-
-
+    catch (err) {
+        console.log(err);
+        res.send({ "msg": "wrong" })
     }
-
-
-
 })
+
 
 
 // Post Operation
