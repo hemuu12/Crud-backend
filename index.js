@@ -13,7 +13,7 @@ app.use(cors())
 
 
 app.use("/data",postRouter)
-app.use("/",async(req,res)=>{
+app.get("/",async(req,res)=>{
     res.send("Welcome Home")
 })
 
