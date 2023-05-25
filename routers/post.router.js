@@ -7,7 +7,7 @@ const postRouter=express.Router()
 
 // Get Operation
 
-postRouter.get("/",async(req,res)=>{
+postRouter.get("/employee",async(req,res)=>{
 
     try{
         let data
