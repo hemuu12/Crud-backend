@@ -12,7 +12,6 @@ postRouter.get("/employee",async(req,res)=>{
     try{
         let data
         data=await postModel.find()
-        res.status(200);
         res.send({
             status: 200,
             data: data,
