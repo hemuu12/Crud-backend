@@ -7,7 +7,7 @@ const postRouter=express.Router()
 
 // Get Operation
 
-postRouter.get("/", async (req, res) => {
+postRouter.get("/go", async (req, res) => {
     try {
         const notes = await postModel.find();
         res.send(notes);
