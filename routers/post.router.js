@@ -8,9 +8,9 @@ const postRouter=express.Router()
 // Get Operation
 
 postRouter.get("/employee",async(req,res)=>{
-
+    let data
     try{
-        let data
+    
         data=await postModel.find()
         res.send({
             status: 200,
