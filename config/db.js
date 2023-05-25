@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
+require("dotenv").config()
 
-const mongourl="mongodb+srv://hari:hari@cluster1.dlyqx9j.mongodb.net/nediadata?retryWrites=true&w=majority"
-const connection =mongoose.connect(mongourl)
+const connection =mongoose.connect(process.env.mongourl)
 
 module.exports={
     connection
