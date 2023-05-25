@@ -12,11 +12,11 @@ app.use(express.json())
 app.use(cors())
 
 
-
+app.use("/data",postRouter)
 app.use("/",async(req,res)=>{
     res.send("Welcome Home")
 })
-app.use("/data",postRouter)
+
 
 
 app.listen(process.env.port,async(req,res)=>{
