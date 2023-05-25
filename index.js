@@ -13,6 +13,9 @@ app.use(cors())
 
 
 
+app.use("/",async(req,res)=>{
+    res.send("Welcome Home")
+})
 app.use("/data",postRouter)
 
 
